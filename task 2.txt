@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class StudentGrade {
+    public static void main(String[] args) {
+        float[] marks = new float[5];
+        float average = 0.0f;
+        float sum = 0.0f;
+        Scanner sc = new Scanner(System.in);
+
+        // Input marks
+        System.out.println("Enter marks for 5 subjects:");
+        for (int i = 0; i < 5; i++) {
+            marks[i] = sc.nextFloat();
+        }
+
+        // Display marks
+        System.out.println("The marks obtained are:");
+        for (int i = 0; i < 5; i++) {
+            System.out.println(marks[i]);
+        }
+
+        // Calculate sum
+        for (int i = 0; i < 5; i++) {
+            sum += marks[i];
+        }
+        System.out.println("The total marks obtained is: " + sum);
+
+        // Calculate average
+        average = sum / 5;
+        System.out.println("The average marks obtained is: " + average);
+
+        // Determine grade
+        if (average >= 91.0 && average <= 100.0) {
+            System.out.println("Grade: O");
+        } else if (average >= 81.0 && average <= 90.0) {
+            System.out.println("Grade: A+");
+        } else if (average >= 71.0 && average <= 80.0) {
+            System.out.println("Grade: A");
+        } else if (average >= 61.0 && average <= 70.0) {
+            System.out.println("Grade: B+");
+        } else if (average >= 51.0 && average <= 60.0) {
+            System.out.println("Grade: B");
+        } else if (average >= 41.0 && average <= 50.0) {
+            System.out.println("Grade: C+");
+        } else if (average >= 37.0 && average <= 40.0) {
+            System.out.println("Grade: D");
+        } else {
+            System.out.println("Fail");
+        }
+    }
+}
